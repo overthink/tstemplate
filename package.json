@@ -1,0 +1,39 @@
+{
+  "name": "CHANGEME",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/app.bundle.js",
+  "watch": {
+    "test-pretty": {
+      "patterns": [
+        "src",
+        "test"
+      ],
+      "extensions": "ts"
+    }
+  },
+  "scripts": {
+    "start": "node_modules/.bin/webpack-dev-server",
+    "build": "node_modules/.bin/webpack",
+    "build:watch": "node_modules/.bin/webpack -w",
+    "clean": "rm -rf ./dist/*",
+    "test-pretty": "npm test | node_modules/.bin/faucet",
+    "test": "node_modules/.bin/ts-node node_modules/.bin/tape 'test/**/*.ts'",
+    "watch": "node_modules/.bin/npm-watch"
+  },
+  "author": "CHANGEME",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/tape": "^4.2.29",
+    "copy-webpack-plugin": "^4.0.1",
+    "faucet": "0.0.1",
+    "file-loader": "^0.10.0",
+    "npm-watch": "^0.1.8",
+    "tape": "^4.6.3",
+    "ts-loader": "^2.0.0",
+    "ts-node": "^2.1.0",
+    "typescript": "^2.1.5",
+    "webpack": "^2.2.1",
+    "webpack-dev-server": "^2.3.0"
+  }
+}
