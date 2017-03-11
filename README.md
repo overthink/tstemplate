@@ -6,11 +6,20 @@ reasonably good dev experience.
 
 # HOWTO
 
-- clone this repo
+- Get a copy of the template:
+
+```text
+git clone https://github.com/overthink/tstemplate myproject
+cd myproject
+rm -rf .git
+git init
+```
+
 - change the `CHANGEME` values in `package.json` to suit your project
-- run `npm start`
+- `npm install`
+- `npm start`
 - look at http://localhost:8000
-- run `npm run test` to test, or `npm run watch` to run tests on any change
+- run `npm test` to test, or `npm run watch` to run tests on any file change
 
 # Includes
 
@@ -18,4 +27,5 @@ reasonably good dev experience.
 - webpack 2.x
 - webpack-dev-server
 - tape for testing
+- static asset handling (copies into dist directory)
 
